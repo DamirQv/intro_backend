@@ -1,0 +1,16 @@
+{% extends "post/base.html" %}
+
+{% block content %}
+    <h1>{{ thread.name }}</h1>
+    <p>{{ thread.description }}</p>
+
+    <h2>Сообщения</h2>
+    <ul class="list-group">
+        {% for post in posts %}
+            <li class="list-group-item">
+                <strong>{{ post.title }}</strong> — {{ post.author }}<br>
+                {{ post.description }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

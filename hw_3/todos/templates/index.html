@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    <h1>Добро пожаловать!</h1>
+    <p>Вы можете:</p>
+    <ul>
+        <li><a href="{% url 'todo_list' %}">Перейти к списку задач</a></li>
+        <li><a href="{% url 'admin:index' %}">Перейти в админку</a></li>
+    </ul>
+{% endblock %}

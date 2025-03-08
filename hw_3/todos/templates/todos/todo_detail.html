@@ -1,0 +1,6 @@
+<h1>{{ todo.title }}</h1>
+<p>{{ todo.description }}</p>
+<p>Дата: {{ todo.due_date }}</p>
+<p>Статус: {% if todo.status %}Выполнено{% else %}Не выполнено{% endif %}</p>
+<a href="{% url 'todo_delete' todo.id %}">Удалить</a>
+<a href="{% url 'todo_list' %}">Назад</a>
